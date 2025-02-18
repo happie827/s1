@@ -41,7 +41,6 @@ def train():
         model = transformers.AutoModelForCausalLM.from_pretrained(config.model_name)
 
     dataset = load_dataset(config.train_file_path)
-
     # setting up trainer
     tokenizer = transformers.AutoTokenizer.from_pretrained(config.model_name, use_fast=True)
     if "Llama" in config.model_name:
