@@ -13,7 +13,7 @@ gpu_count=$(nvidia-smi -L | wc -l)
 push_to_hub=false
 
 # torchrun --nproc-per-node ${gpu_count} --master_port 12345 \
-#     --block_size=256 \ #32768 \
+#     --block_size=32768 \
 #     --per_device_train_batch_size=${micro_batch_size} \
 #     --per_device_eval_batch_size=${micro_batch_size} \
 #     --gradient_accumulation_steps=${gradient_accumulation_steps} \
